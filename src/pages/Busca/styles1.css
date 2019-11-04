@@ -12,8 +12,8 @@ html, body, #root{
 }
 
 body{
-  background: #000 url('./assets//wallpaper.jpg') no-repeat;
-  background-size: cover;
+  background: #000 url('../.././assets/wallpaper.jpg');
+  background-size: 100%;
   -webkit-font-smoothing: antialiased !important;
 }
 
