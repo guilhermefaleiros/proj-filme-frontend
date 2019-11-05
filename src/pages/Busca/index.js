@@ -14,6 +14,7 @@ export default function Busca({history}){
           console.log(response.data)
       }
       loadMovies()
+      setFiltro("Drama")
       
   }, [])
     async function handleSubmit(event){
