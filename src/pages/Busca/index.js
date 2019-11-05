@@ -5,13 +5,15 @@ import './styles1.css'
 export default function Busca({history}){
     const [filtro, setFiltro] = useState('')
 
-
     async function handleSubmit(event){
         event.preventDefault()
         const str = filtro.toLowerCase()
         localStorage.setItem('filtro', str)
         console.log(str)
-        history.push('/dashboard')
+        if(str!==''){
+          history.push('/dashboard')
+          localStorage.setItem('vazio', false);
+        }
     }
     return (
       <div className="container">
@@ -21,7 +23,7 @@ export default function Busca({history}){
         </p>
 
         <form onSubmit={handleSubmit}>
-          <label htmlFor="filtro">DIGITE O GÊNERO DO FILME DESEJADO *</label>
+          <label htmlFor="filtro">DIGITE O GÊNERO DO FILME DESEJADO</label>
           <input type="text"
            id="filtro"
             placeholder="Ex: DRAMA, AÇÃO, etc..."

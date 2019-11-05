@@ -37,7 +37,7 @@ export default function Dashboard({history}){
                         <span>Gênero: {filtro}</span>
                         <span>Nota IMDB: {movie.score}</span>
                         <span>N° IMDB: {movie.id}</span>
-                        <span><a href={movie.imdb}>Clique para acessar no IMDB</a></span>
+                        <span><a href={`http://www.imdb.com/title/tt0${movie.id}`}>Clique para acessar no IMDB</a></span>
                     </li>
                 ))}
             </ul>
