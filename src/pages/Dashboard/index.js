@@ -29,7 +29,7 @@ export default function Dashboard({history}){
     <div className="container">
         <div className="content">
             <button onClick={backToFilter}>Voltar para o campo de filtro</button>
-            <p>Exibindo resultados para {filtro}:</p>
+            <p>Exibindo resultados para <strong>{filtro}</strong>:</p>
             <ul className="movie-list">
                 {movies.map(movie => (
                     <li key={movie._id}>
